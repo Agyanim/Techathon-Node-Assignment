@@ -14,9 +14,9 @@ const server = createServer((req, res) => {
   const method = req.method;
   const id = parsedUrl.query.bookId;
 
-  // outter switch statement
+  // outer switch statement
   switch (method) {
-    // outter switch case
+    // outer switch case
     case "POST":
       switch (pathName) {
         case "/book":
@@ -27,7 +27,7 @@ const server = createServer((req, res) => {
           break;
       }
       break;
-    // outter switch case
+    // outer switch case
     case "GET":
       switch (pathName) {
         case "/book":
@@ -39,17 +39,18 @@ const server = createServer((req, res) => {
         default:
           break;
       }
-    // outter switch case
+      break;
+    // outer switch case
     case "PUT":
       switch (pathName) {
         case "/book/id":
           updateBook(req, res, id);
           break;
-
         default:
           break;
       }
-    // outter switch case
+      break;
+    // outer switch case
     case "DELETE":
       switch (pathName) {
         case "/book/id":
